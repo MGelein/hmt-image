@@ -64,8 +64,21 @@ $(document).ready(function(){
   if(params.urn != undefined){
       if(params.urn.indexOf('urn:cite2:hmt:') == -1) return;
       $('#urnField').val(params.urn);
-      loadImage();
   }
+  loadImage();
+
+  $('#urnField').focus(function(){
+    $('#urnField').val('');
+  });
+
+  //when you press enter you load the image
+  $("#urnField").keypress(function (e) {
+        var code = (e.keyCode ? e.keyCode : e.which);
+        if (code == 13) {
+            loadImage();
+            return true;
+        }
+    });
 });
 
 
