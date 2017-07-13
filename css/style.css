@@ -4,6 +4,14 @@ body{
   background-size: 100%;
 }
 
+.container{
+  width: 95% !important;
+}
+
+.smallpad{
+  margin-top: 0.5em;
+}
+
 #header{
   margin-top: 2em;
   padding: 1em;

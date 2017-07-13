@@ -19,11 +19,33 @@
     <p id="copyright" class="pull-right text-right">Written by Mees Gelein<br>
       &copy;2017 under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0 license</a>
     </p>
-    <h1>Homer Multitext Image Request</h1>
+    <h1>Homer's Multitext Image Request</h1>
   </div>
 
   <div class="container">
-
+    <div class="row">
+      <div class="col-xs-3">
+        <div class="panel panel-success">
+          <div class="panel-heading">Image Request</div>
+          <div class="panel-body">
+              <label for="urnField">URN: </label>
+              <input id="urnField" class="form-control" type="text" placeholder="Type your urn here..."/>
+              <input type="button" value="Load Image" class="btn btn-success smallpad" onclick="loadImage()">
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-9">
+        <div class="panel panel-info maxheight">
+          <div class="panel-heading">Image</div>
+          <div class="panel-body">
+            <input type="button" class="btn btn-primary btn-xs" value="Copy Image URL" onclick="copyTextToClipboard()"/>
+            <a id="downloadLink" href="" class="btn btn-info btn-xs" download="HMT_Image.JPEG"><i class="glyphicon glyphicon-download-alt"></i>&nbsp;Download Image</a>
+            <br><br>
+            <img id="loadedImage" class="img-responsive"/>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
