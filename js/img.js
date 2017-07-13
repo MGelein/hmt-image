@@ -22,6 +22,8 @@ function loadImage(e){
   //set the loaded image download link
   $('#downloadLink').attr('href', srcString);
   $('#downloadLink').attr('download', 'download.jpeg');
+  //if you click on the image you view the original
+  $('#imageLink').attr('href', srcString);
   return false;
 }
 
